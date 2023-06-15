@@ -60,7 +60,7 @@ int main()
 
 /////////////////
 	u16 curSpriteIndex = 1;
-	enemies[0] = SPR_addSpriteEx(&spr_sonic, 100, 100, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex, SPR_FLAG_AUTO_TILE_UPLOAD | SPR_FLAG_AUTO_SPRITE_ALLOC );
+	enemies[0] = SPR_addSpriteEx(&spr_sonic, 100, 100, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex, SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);
 	curSpriteIndex++;
 	SPR_setAnim(enemies[0], 2);
 
@@ -69,7 +69,7 @@ int main()
 	for(u16 i=0;i<5;i++){
 		for(u16 j=0;j<6;j++){
 			const u16 enemyIndex = i+(i*j);
-			enemies[enemyIndex] = SPR_addSpriteEx(&spr_sonic, i*30, j*30, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex, SPR_FLAG_AUTO_SPRITE_ALLOC);
+			enemies[enemyIndex] = SPR_addSpriteExSafe(&spr_sonic, i*30, j*30, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex,  SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC);
 			if(enemies[enemyIndex] == NULL){
 				break;
 			}

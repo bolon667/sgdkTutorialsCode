@@ -1,4 +1,4 @@
 out/res/resources.o: res/resources.res \
-E:/Code/Sega/OptimizedSprites/res/enemy02.png \
-E:/Code/Sega/OptimizedSprites/res/image.png \
-E:/Code/Sega/OptimizedSprites/res/sonic.png
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/17_OptimizedSprites/res/enemy02.png \
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/17_OptimizedSprites/res/image.png \
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/17_OptimizedSprites/res/sonic.png
