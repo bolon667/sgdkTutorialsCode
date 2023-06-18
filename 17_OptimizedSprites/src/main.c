@@ -66,17 +66,17 @@ int main()
 
 	//SPR_FLAG_AUTO_TILE_UPLOAD
 	
-	for(u16 i=0;i<5;i++){
-		for(u16 j=0;j<6;j++){
-			const u16 enemyIndex = i+(i*j);
-			enemies[enemyIndex] = SPR_addSpriteExSafe(&spr_sonic, i*30, j*30, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex,  SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC);
-			if(enemies[enemyIndex] == NULL){
-				break;
-			}
-			SPR_setAnim(enemies[enemyIndex], 2);
-			curSpriteIndex++;
-		}
-	}
+	// for(u16 i=0;i<5;i++){
+	// 	for(u16 j=0;j<6;j++){
+	// 		const u16 enemyIndex = (i*5)+j;
+	// 		enemies[enemyIndex] = SPR_addSpriteExSafe(&spr_sonic, i*30, j*30, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex,  SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC);
+	// 		if(enemies[enemyIndex] == NULL){
+	// 			break;
+	// 		}
+	// 		SPR_setAnim(enemies[enemyIndex], 2);
+	// 		curSpriteIndex++;
+	// 	}
+	// }
 
 
 
@@ -103,13 +103,16 @@ int main()
 	// }
 
 
-	// for(u16 i=5;i<8;i++){
-	// 	for(u16 j=3;j<5;j++){
-	// 		const u16 enemyIndex = i+(i*j);
-	// 		enemies[enemyIndex] = SPR_addSprite(&spr_sonic, i*30, j*30, TILE_ATTR(PAL3, 0, FALSE, FALSE));
-	// 		SPR_setAnim(enemies[enemyIndex], 2);
-	// 	}
-	// }
+	for(u16 i=0;i<7;i++){
+		for(u16 j=0;j<4;j++){
+			const u16 enemyIndex = (i*4)+j;
+			enemies[enemyIndex] = SPR_addSprite(&spr_sonic, i*30, j*30, TILE_ATTR(PAL3, 0, FALSE, FALSE));
+			if(enemies[enemyIndex] == NULL) {
+				break;
+			}
+			SPR_setAnim(enemies[enemyIndex], 2);
+		}
+	}
 	
 	
 
