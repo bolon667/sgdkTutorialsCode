@@ -1,5 +1,5 @@
 out/res/resources.o: res/resources.res \
-E:/Code/Sega/4_Moving1Sprite/res/2_pic.png \
-E:/Code/Sega/4_Moving1Sprite/res/image.png \
-E:/Code/Sega/4_Moving1Sprite/res/1_pic.png \
-E:/Code/Sega/4_Moving1Sprite/res/sonic.png
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/15_SpriteTileReplace/res/2_pic.png \
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/15_SpriteTileReplace/res/image.png \
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/15_SpriteTileReplace/res/1_pic.png \
+C:/Users/bolon667/Documents/GitHub/sgdkTutorialsCode/15_SpriteTileReplace/res/sonic.png

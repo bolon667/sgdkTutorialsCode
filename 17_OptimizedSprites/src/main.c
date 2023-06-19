@@ -103,14 +103,32 @@ int main()
 	// }
 
 
-	for(u16 i=0;i<7;i++){
-		for(u16 j=0;j<4;j++){
-			const u16 enemyIndex = (i*4)+j;
-			enemies[enemyIndex] = SPR_addSprite(&spr_sonic, i*30, j*30, TILE_ATTR(PAL3, 0, FALSE, FALSE));
-			if(enemies[enemyIndex] == NULL) {
+	// for(u16 i=0;i<7;i++){
+	// 	for(u16 j=0;j<4;j++){
+	// 		const u16 enemyIndex = (i*4)+j;
+	// 		enemies[enemyIndex] = SPR_addSprite(&spr_sonic, i*30, j*30, TILE_ATTR(PAL3, 0, FALSE, FALSE));
+	// 		if(enemies[enemyIndex] == NULL) {
+	// 			break;
+	// 		}
+	// 		SPR_setAnim(enemies[enemyIndex], 2);
+	// 	}
+	// }
+
+	enemies[0] = SPR_addSpriteEx(&spr_sonic, 100, 100, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex, SPR_FLAG_AUTO_TILE_UPLOAD | SPR_FLAG_AUTO_SPRITE_ALLOC );
+        //SPR_FLAG_AUTO_SPRITE_ALLOC - аллоцируем спрайт
+        //SPR_FLAG_AUTO_TILE_UPLOAD - разрешаем спрайту писать в VRAM
+	curSpriteIndex++;
+	SPR_setAnim(enemies[0], 2);
+	
+	for(u16 i=0;i<5;i++){
+		for(u16 j=0;j<6;j++){
+			const u16 enemyIndex = (i*6)+j;
+			enemies[enemyIndex] = SPR_addSpriteEx(&spr_sonic, i*30, j*30, TILE_ATTR_FULL(PAL3, 0, FALSE, FALSE, vramIndex), curSpriteIndex, SPR_FLAG_AUTO_SPRITE_ALLOC);
+			if(enemies[enemyIndex] == NULL){
 				break;
 			}
 			SPR_setAnim(enemies[enemyIndex], 2);
+			curSpriteIndex++;
 		}
 	}
 	
